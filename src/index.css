@@ -4,15 +4,12 @@
   /* --animate-ripple: ripple 1s linear infinite; */
 
   --color-transparent: transparent;
-  --color-primary1: #ff3811;
-  --color-secondary1: #444444;
+  --color-primary1: #ffb606;
+  --color-secondary1: #f3f3f3;
   --color-nu10: #ffffff;
   --color-nu20: #000000;
-  --color-nu30: #737373;
-  --color-nu40: #a2a2a2;
-  --color-nu50: #d0d0d0;
-  --color-nu60: #e8e8e8;
-  --color-nu70: #f3f3f3;
+  --color-nu30: #f24c0a;
+  --color-nu40: #00d637;
 
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
