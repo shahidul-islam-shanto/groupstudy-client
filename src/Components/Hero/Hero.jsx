@@ -1,43 +1,54 @@
 import React from "react";
-import "./Hero.css";
 import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-
-import "./styles.css";
-
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import Hero1 from "../../assets/images/hero1.png";
+import Hero2 from "../../assets/images/hero2.png";
+import Hero3 from "../../assets/images/hero3.png";
+import Hero4 from "../../assets/images/hero4.png";
+import "./Hero.css";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Hero = () => {
   return (
     <>
-      <div className="hero-section h-screen  md:px-10 sm:px-6 px-3 overflow-hidden">
-        <div className="container-2">
-          <Swiper
-            spaceBetween={30}
-            effect={"fade"}
-            navigation={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[EffectFade, Navigation, Pagination]}
-            className="mySwiper"
-          >
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-            </SwiperSlide>
-          </Swiper>
-        </div>
+      <div className="hero-image">
+        <Swiper
+          spaceBetween={30}
+          centeredSlides={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <div className="">
+              <img className="w-full h-screen hero-image" src={Hero1} alt="" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="">
+              <img className="w-full h-screen hero-image" src={Hero2} alt="" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="">
+              <img className="w-full h-screen hero-image" src={Hero3} alt="" />
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="">
+              <img className="w-full h-screen hero-image" src={Hero4} alt="" />
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </>
   );
