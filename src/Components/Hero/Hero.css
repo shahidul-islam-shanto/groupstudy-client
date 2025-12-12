@@ -1,0 +1,5 @@
+.hero-section {
+  background: url("../../assets/images/hero1.png") lightgray 50% / cover
+    no-repeat;
+  background-attachment: fixed;
+}

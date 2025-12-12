@@ -1,9 +1,12 @@
 import React from "react";
+import NavBer from "../../Components/NavBer/NavBer";
+import Hero from "../../Components/Hero/Hero";
 
 const Assignments = () => {
   return (
     <div>
-      <h1>this is a Assignments page</h1>
+      <NavBer />
+      <Hero />
     </div>
   );
 };
