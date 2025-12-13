@@ -1,128 +1,147 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { useState } from "react";
+import { IoMenu } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import Dropdown from "./Dropdown";
 import { IoSearch } from "react-icons/io5";
-import { IoMdPhonePortrait } from "react-icons/io";
-import MobileMenu from "./MobileMenu";
+import { IoCloseSharp } from "react-icons/io5";
 
 const NavBer = () => {
-  //   const [open, setOpen] = useState(false);
-  //   const toggleSearch = () => {
-  //     setOpen(!open);
-  //   };
+  const [open, setOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
+  const [htmlOpen, setHtmlOpen] = useState(false);
+  const [jsOpen, setJsOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   return (
-    <div>
-      <div className="bg-nu10 overflow-hidden">
-        <nav className="relative container-2 px-2 py-6 z-40 ">
-          <div className="lg:block hidden">
-            <div className=" px-10 mx-auto flex justify-between items-center xl:gap-6 gap-2">
-              <div className="">
-                <Link to={"/"} className="flex items-center">
-                  <span className="fs-three">Group</span>
-                  <span className="fs-three text-primary1">Study</span>
-                </Link>
-              </div>
-              <div className=" lg:block hidden">
-                <ul className=" flex items-center xl:gap-6 gap-2">
-                  <li className="flex relative group cursor-pointer">
-                    <Link to={"/"} className="mr-1 flex items-center gap-1">
-                      Home
-                    </Link>
-                  </li>
-                  <li className="flex relative group cursor-pointer">
-                    <Link
-                      to={"javascript:void(0)"}
-                      className="mr-1 flex items-center gap-1"
-                    >
-                      <span>Properties</span>
-                      <span>
-                        <IoIosArrowDown />
-                      </span>
-                    </Link>
+    <nav className="fixed top-0 left-0 w-full h-[70px] bg-nu10 z-50">
+      <div className="max-w-[1250px] mx-auto h-full flex items-center justify-between px-6">
+        {/* Menu Icon (Mobile) */}
+        <button className="md:hidden text-nu20" onClick={() => setOpen(true)}>
+          <IoMenu />
+        </button>
 
-                    <Dropdown />
-                  </li>
-                  <li className="flex relative group cursor-pointer">
-                    <Link
-                      to={"javascript:void(0)"}
-                      className="mr-1 flex items-center gap-1"
-                    >
-                      <span>Features</span>
-                      <span>
-                        <IoIosArrowDown />
-                      </span>
-                    </Link>
-                    <Dropdown />
-                  </li>
-                  <li className="flex relative group cursor-pointer">
-                    <Link
-                      to={"javascript:void(0)"}
-                      className="mr-1 flex items-center gap-1"
-                    >
-                      <span>Agents</span>
-                      <span>
-                        <IoIosArrowDown />
-                      </span>
-                    </Link>
-                    <Dropdown />
-                  </li>
-                  <li className="flex relative group cursor-pointer">
-                    <Link
-                      to={"javascript:void(0)"}
-                      className="mr-1 flex items-center gap-1"
-                    >
-                      <span>Submit</span>
-                      <span>
-                        <IoIosArrowDown />
-                      </span>
-                    </Link>
-                    <Dropdown />
-                  </li>
-                  <li className="flex relative group cursor-pointer">
-                    <Link
-                      to={"javascript:void(0)"}
-                      className="mr-1 flex items-center gap-1"
-                    >
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              {/* <div className="flex items-center lg:gap-4 gap-1">
-                <div className="relative z-50 px-4 py-4 text-nu20 cursor-pointer border-r-2 border-nu50">
-                  <div className="py-2">
-                    <IoSearch
-                      onClick={toggleSearch}
-                      className="text-nu20 text-[28px] cursor-pointer"
-                    />
-                  </div>
-                  <div className="absolute right-4 top-0">
-                    <div
-                      className={`absolute right-0 top-12 w-72 h-10 rounded-lg bg-nu40 transition-all duration-300 
-                     ${
-                       open
-                         ? "opacity-100 pointer-events-auto"
-                         : "opacity-0 pointer-events-none"
-                     }
-                       `}
-                    >
-                      <input
-                        type="text"
-                        placeholder="Search..."
-                        className="absolute placeholder:text-nu20 top-1/2 left-1/2 w-[260px] h-10 text-base transform -translate-x-1/2 -translate-y-1/2 px-3 rounded outline-none"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div> */}
+        {/* Logo */}
+        <div className="text-nu20 text-2xl font-semibold">Logo</div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex items-center gap-6 text-white text-sm font-medium">
+          <li className="text-nu20">HOME</li>
+
+          {/* HTML & CSS */}
+          <li className="relative group cursor-pointer">
+            <div className="flex items-center gap-1 text-nu20">
+              HTML & CSS <IoIosArrowDown className="" />
             </div>
-          </div>
-          <MobileMenu />
-        </nav>
+            <ul className="absolute top-full left-0 hidden group-hover:block bg-[#3E8DA8] rounded shadow mt-0.5 w-48">
+              <li className="px-4 py-2 bg-nu20">Web Design</li>
+              <li className="px-4 py-2 bg-nu20">Login Forms</li>
+              <li className="px-4 py-2 bg-nu20">Card Design</li>
+            </ul>
+          </li>
+
+          {/* JavaScript */}
+          <li className="relative group cursor-pointer">
+            <div className="flex items-center gap-1 text-nu20">
+              JAVASCRIPT <IoIosArrowDown />
+            </div>
+            <ul className="absolute top-full left-0 hidden group-hover:block bg-[#3E8DA8] rounded shadow mt-2 w-52">
+              <li className="px-4 py-2 bg-nu20">Dynamic Clock</li>
+              <li className="px-4 py-2 bg-nu20">Form Validation</li>
+              <li className="px-4 py-2 bg-nu20">Card Slider</li>
+            </ul>
+          </li>
+
+          <li className="text-nu20">ABOUT US</li>
+          <li className="text-nu20">CONTACT US</li>
+        </ul>
+
+        {/* Search */}
+        <div className="relative">
+          <button
+            onClick={() => setShowSearch(!showSearch)}
+            className="text-nu20"
+          >
+            <IoSearch />
+          </button>
+          {showSearch && (
+            <div className="absolute right-0 mt-4 bg-nu10 p-3 rounded shadow">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-[400px] px-3 py-2 rounded outline-none"
+              />
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        className={`fixed top-0 left-0 h-full w-full bg-[#3E8DA8] p-5 transition-transform duration-300 md:hidden ${
+          open ? "translate-x-0" : "-translate-x-full"
+        }`}
+      >
+        <div className="flex items-center justify-between text-white mb-6">
+          <span className="text-xl font-semibold">Logo</span>
+          <button onClick={() => setOpen(false)}>
+            <IoCloseSharp />
+          </button>
+        </div>
+
+        <ul className="space-y-3 text-white">
+          <li>HOME</li>
+
+          <li>
+            <button
+              onClick={() => setHtmlOpen(!htmlOpen)}
+              className="flex items-center justify-between w-full"
+            >
+              HTML & CSS <IoIosArrowDown />
+            </button>
+            {htmlOpen && (
+              <ul className="ml-4 mt-2 space-y-2">
+                <li>Web Design</li>
+                <li>Login Forms</li>
+                <li>
+                  <button
+                    onClick={() => setMoreOpen(!moreOpen)}
+                    className="flex items-center gap-1"
+                  >
+                    More{" "}
+                    <ChevronRight className={`${moreOpen && "rotate-90"}`} />
+                  </button>
+                  {moreOpen && (
+                    <ul className="ml-4 mt-2 space-y-1">
+                      <li>Neumorphism</li>
+                      <li>Pre-loader</li>
+                      <li>Glassmorphism</li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
+            )}
+          </li>
+
+          <li>
+            <button
+              onClick={() => setJsOpen(!jsOpen)}
+              className="flex items-center justify-between w-full"
+            >
+              JAVASCRIPT <IoIosArrowDown />
+            </button>
+            {jsOpen && (
+              <ul className="ml-4 mt-2 space-y-2">
+                <li>Dynamic Clock</li>
+                <li>Form Validation</li>
+                <li>Card Slider</li>
+              </ul>
+            )}
+          </li>
+
+          <li>ABOUT US</li>
+          <li>CONTACT US</li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 

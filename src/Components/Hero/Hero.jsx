@@ -13,7 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Hero = () => {
   return (
     <>
-      <div className="">
+      <div className="relative z-40">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
@@ -30,7 +30,7 @@ const Hero = () => {
           className="mySwiper"
         >
           <SwiperSlide>
-            <div className="relative z-30">
+            <div className="relative z-40">
               <div className="hero-wrapper">
                 <img
                   className="w-full h-screen hero-image"
