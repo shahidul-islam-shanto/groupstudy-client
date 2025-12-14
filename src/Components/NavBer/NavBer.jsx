@@ -83,20 +83,21 @@ const NavBer = () => {
           </div>
         </div>
         {/* Mobile Sidebar */}
-        <div className=" ">
+        <div className=" flex lg:hidden justify-center items-center">
           <div
-            className={`fixed top-0 left-0 h-full w-full bg-[#3E8DA8] p-5 transition-transform duration-300  ${
+            className={`fixed top-0 left-0 h-full w-full bg-primary1 p-5 transition-transform duration-300  ${
               open ? "translate-x-0" : "-translate-x-full"
             }`}
           >
-            <div className="flex items-center justify-between text-white mb-6">
-              <span className="text-xl font-semibold">Logo</span>
+            <div className="flex items-center justify-end text-nu20 mb-6">
               <button onClick={() => setOpen(false)}>
-                <IoCloseSharp />
+                <span>
+                  <IoCloseSharp className="text-[28px]" />
+                </span>
               </button>
             </div>
 
-            <ul className="space-y-3 text-nu10 text-center">
+            <ul className="space-y-3 text-nu20 m-auto text-center w-full h-full py-40">
               <li>HOME</li>
 
               <li>
