@@ -4,7 +4,7 @@ import Hero from "../../Components/Hero/Hero";
 import Test from "../../Components/Test";
 // import NavBers from "../../Components/NavBer/NavBers";
 
-const Assignments = () => {
+const Home = () => {
   return (
     <div>
       <NavBer />
@@ -15,4 +15,4 @@ const Assignments = () => {
   );
 };
 
-export default Assignments;
+export default Home;

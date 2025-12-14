@@ -2,6 +2,7 @@
 
 @theme {
   /* --animate-ripple: ripple 1s linear infinite; */
+  --font-display: "Rubik", sans-serif;
 
   --color-transparent: transparent;
   --color-primary1: #ffb606;
@@ -10,6 +11,7 @@
   --color-nu20: #000000;
   --color-nu30: #f24c0a;
   --color-nu40: #00d637;
+  --color-nu50: #ffffff3d;
 
   --breakpoint-sm: 576px;
   --breakpoint-md: 768px;
