@@ -68,7 +68,7 @@ const NavBer = () => {
                   setShowSearch(true);
                   setTimeout(() => inputRef.current?.focus(), 100);
                 }}
-                className="text-nu10"
+                className="text-nu20"
               >
                 <IoSearch className="text-[24px]" />
               </button>
