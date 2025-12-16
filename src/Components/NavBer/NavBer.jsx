@@ -1,12 +1,13 @@
 import { useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
-import { IoIosArrowDown } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { IoCloseSharp } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 
 const NavBer = () => {
   const [open, setOpen] = useState(false);
+
   const [showSearch, setShowSearch] = useState(false);
   const [jsOpen, setJsOpen] = useState(false);
   const inputRef = useRef(null);
@@ -26,15 +27,19 @@ const NavBer = () => {
       </li>
 
       <li className="relative group cursor-pointer">
-        <div className="flex items-center gap-1 text-nu10">
-          JAVASCRIPT <IoIosArrowDown />
+        <div className="flex items-center gap-1 text-nu10 group">
+          <span className="cursor-pointer">JAVASCRIPT</span>
+          <IoIosArrowForward className="transition-transform duration-300 group-hover:rotate-90" />
         </div>
-        <ul className="absolute top-full left-0 hidden group-hover:block rounded shadow mt-0.5 w-52">
-          <li className="px-4 py-2 text-nu20 bg-nu10">Dynamic Clock</li>
-          <li className="px-4 py-2 text-nu20 bg-nu10">Form Validation</li>
-          <li className="px-4 py-2 text-nu20 bg-nu10">Card Slider</li>
+
+        <div className="absolute left-0 top-full h-8 w-full"></div>
+        <ul className="absolute left-0 top-[calc(100%+2rem)] hidden group-hover:block rounded shadow w-52 bg-nu10">
+          <li className="px-4 py-2 text-nu20">Dynamic Clock</li>
+          <li className="px-4 py-2 text-nu20">Form Validation</li>
+          <li className="px-4 py-2 text-nu20">Card Slider</li>
         </ul>
       </li>
+
       <li className="text-nu10">
         <NavLink to={"/about"}>ABOUT US</NavLink>
       </li>
@@ -43,36 +48,20 @@ const NavBer = () => {
   );
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-nu50 z-50 py-5">
+    <nav className="fixed top-0 left-0 w-full bg-nu10 z-50 py-5">
       <div className="container-2">
         <div className="flex justify-between items-center">
           <button className="lg:hidden text-nu20" onClick={() => setOpen(true)}>
             <IoMenu className="text-[24px]" />
           </button>
-          <div className="text-nu10 text-2xl font-semibold">
+          <div className="text-nu20 text-2xl font-semibold">
             <h3>GroupStudy</h3>
           </div>
-          <ul className="hidden lg:flex items-center gap-6 text-nu10  font-medium">
+          <ul className="hidden lg:flex items-center gap-6 text-nu20  font-medium">
             {NavBer}
           </ul>
+
           <div className="flex justify-between items-center gap-4">
-            {/* <div className="relative">
-              <button
-                onClick={() => setShowSearch(!showSearch)}
-                className="text-nu10"
-              >
-                <IoSearch className="text-[24px]" />
-              </button>
-              {showSearch && (
-                <div className="absolute right-0 mt-4 bg-nu10 p-3 rounded shadow">
-                  <input
-                    type="text"
-                    placeholder="Search..."
-                    className="w-[400px] px-3 py-2 rounded outline-none"
-                  />
-                </div>
-              )}
-            </div> */}
             <div className="relative">
               <button
                 onClick={() => {
@@ -85,7 +74,7 @@ const NavBer = () => {
               </button>
 
               {showSearch && (
-                <div className="absolute right-0 mt-4 bg-nu10 p-3 rounded shadow">
+                <div className="absolute right-0 mt-4 bg-nu20 p-3 rounded shadow">
                   <input
                     ref={inputRef}
                     type="text"
@@ -96,6 +85,13 @@ const NavBer = () => {
                   />
                 </div>
               )}
+            </div>
+            <div className="">
+              <Link to={"/login"}>
+                <button className="px-4 py-2 bg-primary1 rounded-lg">
+                  Login
+                </button>
+              </Link>
             </div>
             <div className="">
               <Link to={"/register"}>
@@ -125,13 +121,18 @@ const NavBer = () => {
               <li>HOME</li>
 
               <li>
-                <button
+                <div
+                  className="flex items-center justify-center gap-2 cursor-pointer"
                   onClick={() => setJsOpen(!jsOpen)}
-                  className="flex items-center justify-center gap-4 w-full duration-500"
                 >
                   <span>JAVASCRIPT</span>
-                  <IoIosArrowDown className="" />
-                </button>
+                  <IoIosArrowForward
+                    className={`transition-transform duration-300 ${
+                      jsOpen ? "rotate-90" : "rotate-0"
+                    }`}
+                  />
+                </div>
+
                 {jsOpen && (
                   <ul className="ml-4 mt-2 space-y-2">
                     <li>Dynamic Clock</li>
