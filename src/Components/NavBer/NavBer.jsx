@@ -22,28 +22,28 @@ const NavBer = () => {
 
   const NavBer = (
     <>
-      <li className="text-nu10">
+      <li className="text-nu20">
         <NavLink to={"/"}>HOME</NavLink>
       </li>
 
       <li className="relative group cursor-pointer">
-        <div className="flex items-center gap-1 text-nu10 group">
+        <div className="flex items-center gap-1 text-nu20 group">
           <span className="cursor-pointer">JAVASCRIPT</span>
-          <IoIosArrowForward className="transition-transform duration-300 group-hover:rotate-90" />
+          <IoIosArrowForward className="transition-transform duration-300 text-[18px] group-hover:rotate-90" />
         </div>
 
         <div className="absolute left-0 top-full h-8 w-full"></div>
-        <ul className="absolute left-0 top-[calc(100%+2rem)] hidden group-hover:block rounded shadow w-52 bg-nu10">
+        <ul className="absolute left-0 top-[calc(100%+1.8rem)] hidden group-hover:block rounded shadow w-52 bg-nu10">
           <li className="px-4 py-2 text-nu20">Dynamic Clock</li>
           <li className="px-4 py-2 text-nu20">Form Validation</li>
           <li className="px-4 py-2 text-nu20">Card Slider</li>
         </ul>
       </li>
 
-      <li className="text-nu10">
+      <li className="text-nu20">
         <NavLink to={"/about"}>ABOUT US</NavLink>
       </li>
-      <li className="text-nu10">CONTACT US</li>
+      <li className="text-nu20">CONTACT US</li>
     </>
   );
 
