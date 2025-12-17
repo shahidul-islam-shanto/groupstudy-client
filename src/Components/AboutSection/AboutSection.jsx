@@ -6,23 +6,23 @@ import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <>
-      <div className="py-40">
+      <div className="xl:pt-[120px] lg:pt-[100px] md:pt-[90px] sm:pt-20 pt-[70px]">
         <div className="container-2">
-          <div className="grid grid-cols-12 gap-8">
-            <div className="col-span-6">
+          <div className="grid grid-cols-12 xl:gap-8 gap-4">
+            <div className="xl:col-span-6 col-span-12">
               <img className="w-full h-full rounded-lg" src={About} alt="" />
             </div>
-            <div className="col-span-6">
+            <div className="xl:col-span-6 col-span-12">
               <div className="">
-                <h2 className="text-nu20 mb-6">
+                <h2 className="text-nu20 lg:mb-6 mb-4">
                   Educating the next generation with pride.
                 </h2>
-                <p className="text-nu70 mb-8">
+                <p className="text-nu70 lg:mb-8 mb-6">
                   A lively and playful blend of motion, sound, and imagination,
                   where fast-paced actions and quirky characters come together
                   to create an energetic and creative scene.
                 </p>
-                <div className="flex justify-between items-center gap-4 mb-4">
+                <div className="flex max-lg:flex-wrap justify-between items-center lg:gap-4 gap-2 lg:mb-4 mb-3">
                   <div className="">
                     <div className="flex items-center gap-2 mb-5">
                       <span className="px-1.5 py-1.5 bg-primary1 rounded-full">
@@ -66,7 +66,9 @@ const AboutSection = () => {
                 </div>
                 <div className="">
                   <Link to={"/about"}>
-                    <button className="px-6 py-2 bg-primary1 rounded-md">Read More</button>
+                    <button className="px-6 py-2 bg-primary1 rounded-md">
+                      Read More
+                    </button>
                   </Link>
                 </div>
               </div>
