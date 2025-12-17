@@ -31,7 +31,6 @@ const NavBer = () => {
           <span className="cursor-pointer">JAVASCRIPT</span>
           <IoIosArrowForward className="transition-transform duration-300 text-[18px] group-hover:rotate-90" />
         </div>
-
         <div className="absolute left-0 top-full h-8 w-full"></div>
         <ul className="absolute left-0 top-[calc(100%+1.8rem)] hidden group-hover:block rounded shadow w-52 bg-nu10">
           <li className="px-4 py-2 text-nu20">Dynamic Clock</li>

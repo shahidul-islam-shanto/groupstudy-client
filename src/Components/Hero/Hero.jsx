@@ -2,11 +2,11 @@ import React from "react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/effect-fade";
 
 import Hero1 from "../../assets/images/hero1.png";
 import Hero2 from "../../assets/images/hero2.png";
 import Hero3 from "../../assets/images/hero3.png";
-import { SiStudyverse } from "react-icons/si";
 
 import "./Hero.css";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
@@ -15,12 +15,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 const Hero = () => {
   return (
     <>
-      <div className="relative z-40">
+      <div className="">
         <Swiper
           spaceBetween={30}
           centeredSlides={true}
           autoplay={{
-            delay: 3000,
+            delay: 2500,
             disableOnInteraction: false,
           }}
           effect={"fade"}
@@ -31,9 +31,8 @@ const Hero = () => {
           modules={[Autoplay, EffectFade, Navigation, Pagination]}
           className="mySwiper"
         >
-          {/* hero 1 */}
           <SwiperSlide>
-            <div className="relative z-40">
+            <div className="relative z-30">
               <div className="hero-wrapper">
                 <img
                   className="w-full h-screen hero-image"
@@ -42,9 +41,6 @@ const Hero = () => {
                 />
               </div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="flex justify-center items-center mb-4">
-                  <SiStudyverse className="text-nu10 display-2" />
-                </div>
                 <h1 className="text-nu10 mb-3 text-center display-4">
                   University Graduation Admission
                 </h1>
@@ -60,7 +56,6 @@ const Hero = () => {
               </div>
             </div>
           </SwiperSlide>
-          {/* hero 2 */}
           <SwiperSlide>
             <div className="relative z-30">
               <div className="hero-wrapper">
@@ -71,9 +66,6 @@ const Hero = () => {
                 />
               </div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="flex justify-center items-center mb-4">
-                  <SiStudyverse className="text-nu10 display-2" />
-                </div>
                 <h1 className="text-nu10 mb-3 text-center display-4">
                   A truly special experience
                 </h1>
@@ -89,7 +81,6 @@ const Hero = () => {
               </div>
             </div>
           </SwiperSlide>
-          {/* hero 3 */}
           <SwiperSlide>
             <div className="relative z-30">
               <div className="hero-wrapper">
@@ -100,9 +91,6 @@ const Hero = () => {
                 />
               </div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className="flex justify-center items-center mb-4">
-                  <SiStudyverse className="text-nu10 display-2" />
-                </div>
                 <h1 className="text-nu10 mb-3 text-center display-4">
                   Academic Admission for Graduation
                 </h1>
