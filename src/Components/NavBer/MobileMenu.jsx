@@ -23,7 +23,6 @@ const MobileMenu = ({ open, setOpen }) => {
 
           <ul className="space-y-3 text-nu20 m-auto text-center w-full h-full py-40">
             <li>HOME</li>
-
             <li>
               <div
                 className="flex items-center justify-center gap-2 cursor-pointer"
