@@ -8,7 +8,12 @@ const Home = () => {
     <div>
       <Hero />
       <AboutSection />
-      <TopFeatured />
+      <TopFeatured
+        title={"Top Featured Courses"}
+        description={
+          "Our Top Featured Courses section showcases the most popular,updated, and in-demand courses."
+        }
+      />
     </div>
   );
 };
