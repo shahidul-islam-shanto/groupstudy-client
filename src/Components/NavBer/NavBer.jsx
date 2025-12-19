@@ -45,7 +45,7 @@ const NavBer = () => {
   );
 
   return (
-    <nav className="sticky top-0 left-0 w-full bg-nu10 z-50 py-5">
+    <nav className="sticky top-0 left-0 w-full bg-nu10 z-50 py-5 shadow-md">
       <div className="container-2">
         <div className="flex justify-between items-center">
           <button className="lg:hidden text-nu20" onClick={() => setOpen(true)}>

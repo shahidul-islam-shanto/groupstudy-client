@@ -4,12 +4,10 @@ import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import Logins from "../../assets/images/login.png";
-import NavBer from "../../Components/NavBer/NavBer";
 
 const Register = () => {
   return (
     <div>
-      <NavBer />
       <div className="bg-nu10 lg:pt-60 py-28 ">
         <div className="container-2">
           <div className="grid grid-cols-12 gap-10 items-center">

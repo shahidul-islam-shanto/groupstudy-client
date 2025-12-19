@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "coursesName": "Complete Web Development Bootcamp",
+    "author": "Jhankar Mahbub",
+    "authorImg": "https://example.com/authors/jhankar.jpg",
+    "details": "This course covers HTML, CSS, JavaScript, React, Node.js, and MongoDB with hands-on projects to build real-world web applications.",
+    "image": "https://example.com/courses/web-development.jpg",
+    "totalPages": 520,
+    "rating": 4.8,
+    "category": ["Programming", "Web Development"],
+    "price": 4500
+  },
+  {
+    "id": 2,
+    "coursesName": "Graphic Design Masterclass",
+    "author": "Habib Rahman",
+    "authorImg": "https://example.com/authors/habib.jpg",
+    "details": "Learn professional graphic design using Photoshop, Illustrator, and Figma. This course focuses on branding, UI design, and creative layouts.",
+    "image": "https://example.com/courses/graphic-design.jpg",
+    "totalPages": 380,
+    "rating": 4.6,
+    "category": ["Graphics & Design"],
+    "price": 3200
+  },
+  {
+    "id": 3,
+    "coursesName": "Digital Marketing A to Z",
+    "author": "Sarah Ahmed",
+    "authorImg": "https://example.com/authors/sarah.jpg",
+    "details": "Understand SEO, social media marketing, Google Ads, and email marketing to grow businesses and personal brands online.",
+    "image": "https://example.com/courses/digital-marketing.jpg",
+    "totalPages": 410,
+    "rating": 4.7,
+    "category": ["Digital Marketing", "Business"],
+    "price": 3900
+  },
+  {
+    "id": 4,
+    "coursesName": "Creative Writing for Beginners",
+    "author": "Nusrat Jahan",
+    "authorImg": "https://example.com/authors/nusrat.jpg",
+    "details": "This course helps beginners improve storytelling, grammar, and writing style for blogs, articles, and freelancing work.",
+    "image": "https://example.com/courses/creative-writing.jpg",
+    "totalPages": 290,
+    "rating": 4.5,
+    "category": ["Writing & Translation"],
+    "price": 2500
+  },
+  {
+    "id": 5,
+    "coursesName": "Music Production with FL Studio",
+    "author": "Arif Hasan",
+    "authorImg": "https://example.com/authors/arif.jpg",
+    "details": "Learn music production from scratch using FL Studio, including beat making, mixing, mastering, and sound design.",
+    "image": "https://example.com/courses/music-production.jpg",
+    "totalPages": 340,
+    "rating": 4.9,
+    "category": ["Music & Audio"],
+    "price": 4200
+  }
+]
