@@ -4,6 +4,7 @@ import AboutSection from "../../Components/AboutSection/AboutSection";
 
 import TopCourse from "../../Components/TopCourse/TopCourse";
 import Categories from "../../Components/Categories/Categories";
+import UniversityAdmission from "../../Components/UniversityAdmission/UniversityAdmission";
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
       <AboutSection />
       <Categories />
+      <UniversityAdmission />
       <TopCourse
         title={"Top Featured Courses"}
         description={
