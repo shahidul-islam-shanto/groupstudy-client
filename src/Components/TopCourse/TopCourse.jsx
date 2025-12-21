@@ -5,7 +5,7 @@ const TopCourse = ({ title, description }) => {
   const [course, setCourse] = useState([]);
 
   useEffect(() => {
-    fetch("fakeData.json")
+    fetch("http://localhost:5000/courseService")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -4,9 +4,6 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-// import Festival1 from "../../assets/images/festival1.png";
-// import Festival2 from "../../assets/images/festival2.png";
-// import Festival3 from "../../assets/images/festival3.png";
 import Festival1 from "../../assets/images/festival1.png";
 import Festival2 from "../../assets/images/festival2.png";
 import Festival3 from "../../assets/images/festival3.png";

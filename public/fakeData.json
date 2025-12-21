@@ -1,6 +1,5 @@
 [
   {
-    "id": 1,
     "coursesName": "Complete Web Development Bootcamp",
     "author": "Jhankar Mahbub",
     "authorImg": "https://i.ibb.co.com/1wSZ18S/course-man1.jpg",
@@ -12,7 +11,6 @@
     "price": 4500
   },
   {
-    "id": 2,
     "coursesName": "Graphic Design Masterclass",
     "author": "Habib Rahman",
     "authorImg": "https://i.ibb.co.com/Rnc0xhP/course-man2.jpg",
@@ -24,7 +22,6 @@
     "price": 3200
   },
   {
-    "id": 3,
     "coursesName": "Digital Marketing A to Z",
     "author": "Sarah Ahmed",
     "authorImg": "https://i.ibb.co.com/Rk7QhH1p/course-man3.jpg",
@@ -36,7 +33,6 @@
     "price": 3900
   },
   {
-    "id": 4,
     "coursesName": "Creative Writing for Beginners",
     "author": "Nusrat Jahan",
     "authorImg": "https://i.ibb.co.com/7xd10Ynw/course-man4.jpg",
@@ -48,7 +44,6 @@
     "price": 2500
   },
   {
-    "id": 5,
     "coursesName": "Music Production with FL Studio",
     "author": "Arif Hasan",
     "authorImg": "https://i.ibb.co.com/6cnLy4qK/course-man5.jpg",
@@ -60,7 +55,6 @@
     "price": 4200
   },
   {
-    "id": 6,
     "coursesName": "Music Production with FL Studio",
     "author": "Arif Hasan",
     "authorImg": "https://i.ibb.co.com/6cnLy4qK/course-man5.jpg",
