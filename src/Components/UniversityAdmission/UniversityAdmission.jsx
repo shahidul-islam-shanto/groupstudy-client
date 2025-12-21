@@ -4,6 +4,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
+// import Festival1 from "../../assets/images/festival1.png";
+// import Festival2 from "../../assets/images/festival2.png";
+// import Festival3 from "../../assets/images/festival3.png";
 import Festival1 from "../../assets/images/festival1.png";
 import Festival2 from "../../assets/images/festival2.png";
 import Festival3 from "../../assets/images/festival3.png";
@@ -34,13 +37,20 @@ const UniversityAdmission = () => {
               className="mySwiper"
             >
               <SwiperSlide>
-                <div className="grid grid-cols-12 h-full px-3 py-3 bg-nu80 rounded-md">
-                  <div className="col-span-6">
-                    <div className="h-full flex items-center pl-8">
+                <div className="relative text-center">
+                  <div className="hero-wrapper">
+                    <img
+                      className="w-full h-full bg-cover hero-image rounded-xl"
+                      src={Festival1}
+                      alt=""
+                    />
+                  </div>
+                  <div className="rounded-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="">
                       <div className="">
-                        <h2 className="text-nu20 mb-6">
-                          University Admission <br />{" "}
-                          <span className="display-4 mt-2">FESTIVAL</span>
+                        <h2 className="text-nu10 mb-8">
+                          University Admission <br />
+                          <span className="display-4 mt-4">FESTIVAL</span>
                         </h2>
                         <div className="">
                           <Link to={"/"}>
@@ -50,27 +60,25 @@ const UniversityAdmission = () => {
                           </Link>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-span-6">
-                    <div className="hero-wrapper">
-                      <img
-                        className="w-full h-[280px] hero-image rounded-xl"
-                        src={Festival1}
-                        alt=""
-                      />
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="grid grid-cols-12 h-full px-3 py-3 bg-nu80 rounded-md">
-                  <div className="col-span-6">
-                    <div className="h-full flex items-center pl-8">
+                <div className="relative text-center">
+                  <div className="hero-wrapper">
+                    <img
+                      className="w-full h-full bg-cover hero-image rounded-xl"
+                      src={Festival2}
+                      alt=""
+                    />
+                  </div>
+                  <div className="rounded-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="">
                       <div className="">
-                        <h2 className="text-nu20 mb-6">
-                          University Admission <br />{" "}
-                          <span className="display-4 mt-2">FESTIVAL</span>
+                        <h2 className="text-nu10 mb-8">
+                          University Admission <br />
+                          <span className="display-4 mt-4">FESTIVAL</span>
                         </h2>
                         <div className="">
                           <Link to={"/"}>
@@ -80,27 +88,25 @@ const UniversityAdmission = () => {
                           </Link>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-span-6">
-                    <div className="hero-wrapper">
-                      <img
-                        className="w-full h-[280px] hero-image rounded-xl"
-                        src={Festival2}
-                        alt=""
-                      />
                     </div>
                   </div>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
-                <div className="grid grid-cols-12 h-full px-3 py-3 bg-nu80 rounded-md">
-                  <div className="col-span-6">
-                    <div className="h-full flex items-center pl-8">
+                <div className="relative text-center">
+                  <div className="hero-wrapper">
+                    <img
+                      className="w-full h-full bg-cover hero-image rounded-xl"
+                      src={Festival3}
+                      alt=""
+                    />
+                  </div>
+                  <div className="rounded-md absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="">
                       <div className="">
-                        <h2 className="text-nu20 mb-6">
-                          University Admission <br />{" "}
-                          <span className="display-4 mt-2">FESTIVAL</span>
+                        <h2 className="text-nu10 mb-8">
+                          University Admission <br />
+                          <span className="display-4 mt-4">FESTIVAL</span>
                         </h2>
                         <div className="">
                           <Link to={"/"}>
@@ -110,15 +116,6 @@ const UniversityAdmission = () => {
                           </Link>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-span-6">
-                    <div className="hero-wrapper">
-                      <img
-                        className="w-full h-[280px] hero-image rounded-xl"
-                        src={Festival3}
-                        alt=""
-                      />
                     </div>
                   </div>
                 </div>
