@@ -7,8 +7,10 @@
     "image": "https://i.ibb.co.com/TBRbpxTc/course1.jpg",
     "totalPages": 520,
     "rating": 4.8,
-    "category": ["Programming", "Web Development"],
-    "price": 4500
+    "category": "Programming",
+    "price": 4500,
+    "time": "6h 20m",
+    "level": "Beginner"
   },
   {
     "coursesName": "Graphic Design Masterclass",
@@ -18,8 +20,10 @@
     "image": "https://i.ibb.co.com/Nd3060rb/course2.jpg",
     "totalPages": 380,
     "rating": 4.6,
-    "category": ["Graphics & Design"],
-    "price": 3200
+    "category": "Graphics & Design",
+    "price": 3200,
+    "time": "4h 30m",
+    "level": "Beginner"
   },
   {
     "coursesName": "Digital Marketing A to Z",
@@ -29,8 +33,10 @@
     "image": "https://i.ibb.co.com/dsXYbhSh/course3.jpg",
     "totalPages": 410,
     "rating": 4.7,
-    "category": ["Digital Marketing", "Business"],
-    "price": 3900
+    "category": "Digital Marketing",
+    "price": 3900,
+    "time": "5h 10m",
+    "level": "Intermediate"
   },
   {
     "coursesName": "Creative Writing for Beginners",
@@ -40,8 +46,10 @@
     "image": "https://i.ibb.co.com/XkS844jb/course4.jpg",
     "totalPages": 290,
     "rating": 4.5,
-    "category": ["Writing & Translation"],
-    "price": 2500
+    "category": "Writing & Translation",
+    "price": 2500,
+    "time": "3h 40m",
+    "level": "Beginner"
   },
   {
     "coursesName": "Music Production with FL Studio",
@@ -51,8 +59,10 @@
     "image": "https://i.ibb.co.com/4n8phb10/course3.jpg",
     "totalPages": 340,
     "rating": 4.9,
-    "category": ["Music & Audio"],
-    "price": 4200
+    "category": "Music & Audio",
+    "price": 4200,
+    "time": "4h 50m",
+    "level": "Intermediate"
   },
   {
     "coursesName": "Music Production with FL Studio",
@@ -62,7 +72,9 @@
     "image": "https://i.ibb.co.com/j9dkwk4D/course5.jpg",
     "totalPages": 340,
     "rating": 4.9,
-    "category": ["Music & Audio"],
-    "price": 4000
+    "category": "Programming",
+    "price": 5200,
+    "time": "5h 20m",
+    "level": "Expert"
   }
 ]
