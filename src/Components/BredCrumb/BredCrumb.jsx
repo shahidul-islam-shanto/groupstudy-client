@@ -1,5 +1,4 @@
 import React from "react";
-import "./BredCrumb.css";
 import checkout from "../../assets/images/bred-crumb.png";
 import { Link } from "react-router-dom";
 import { IoIosArrowForward } from "react-icons/io";
