@@ -54,18 +54,35 @@ const TopCourseDetails = () => {
                     <input
                       type="radio"
                       name="my_tabs_2"
-                      className="tab text-nu20 mb-3 bg-nu60 px-8"
+                      className="tab text-nu20 mb-3 text-[18px] font-semibold hover:text-primary1 duration-300 bg-nu60 px-8"
                       aria-label="Overview"
                     />
                     <div className="tab-content px-4 py-8 border-0 duration-300">
-                      <h4 className="text-nu20 font-semibold">Course Description</h4>
-
+                      <h4 className="text-nu20 font-semibold mb-4">
+                        Course Description
+                      </h4>
+                      <p className="text-nu70 font-medium mb-3">
+                        This course is designed to help learners gain practical
+                        knowledge and essential skills in a structured and
+                        easy-to-understand way. Starting from the basics and
+                        progressing to advanced concepts, the course ensures a
+                        step-by-step learning experience supported by real-world
+                        examples and hands-on practice.
+                      </p>
+                      <p className="text-nu70 font-medium">
+                        The curriculum includes industry-relevant content,
+                        project-based learning, and modern tools and
+                        technologies to help students build strong
+                        problem-solving skills and real-life project experience.
+                        Each lesson is crafted to make learning engaging,
+                        effective, and applicable in real-world scenarios.
+                      </p>
                     </div>
 
                     <input
                       type="radio"
                       name="my_tabs_2"
-                      className="tab text-nu20 bg-nu60 px-8"
+                      className="tab text-nu20 text-[18px] font-semibold hover:text-primary1 duration-300 bg-nu60 px-8"
                       aria-label="Curriculum"
                     />
                     <div className="tab-content px-8 py-8 border-0 duration-300">
@@ -75,7 +92,7 @@ const TopCourseDetails = () => {
                     <input
                       type="radio"
                       name="my_tabs_2"
-                      className="tab text-nu20 bg-nu60 px-8"
+                      className="tab text-nu20 text-[18px] font-semibold hover:text-primary1 duration-300 bg-nu60 px-8"
                       aria-label="Instructor"
                     />
                     <div className="tab-content px-8 py-8 border-0 duration-300">
@@ -85,7 +102,7 @@ const TopCourseDetails = () => {
                     <input
                       type="radio"
                       name="my_tabs_2"
-                      className="tab text-nu20 bg-nu60 px-8"
+                      className="tab text-nu20 text-[18px] font-semibold hover:text-primary1 duration-300 bg-nu60 px-8"
                       aria-label="Reviews"
                     />
                     <div className="tab-content px-8 py-8 border-0 duration-300">
