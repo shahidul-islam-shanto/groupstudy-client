@@ -3,6 +3,8 @@ import { useLoaderData } from "react-router-dom";
 import BredCrumb from "../../Components/BredCrumb/BredCrumb";
 import { FaStar } from "react-icons/fa";
 import CourseVideo from "../../assets/images/course-video.png";
+import Video from "../../assets/images/video-icon.png";
+import VideoPopup from "../../Components/VideoPopup/VideoPopup";
 
 const TopCourseDetails = () => {
   const courses = useLoaderData();
@@ -114,9 +116,13 @@ const TopCourseDetails = () => {
             </div>
             <div className="col-span-4">
               <div className="px-4 py-4 bg-nu10 shadow -mt-40 mr-8">
-                <div className="">
+                {/* <div className="relative">
                   <img className="" src={CourseVideo} alt="" />
-                </div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2">
+                    <img className="" src={Video} alt="" />
+                  </div>
+                </div> */}
+                <VideoPopup />
               </div>
             </div>
           </div>
