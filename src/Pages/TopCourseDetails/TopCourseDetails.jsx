@@ -115,13 +115,7 @@ const TopCourseDetails = () => {
               </div>
             </div>
             <div className="col-span-4">
-              <div className="px-4 py-4 bg-nu10 shadow -mt-40 mr-8">
-                {/* <div className="relative">
-                  <img className="" src={CourseVideo} alt="" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2">
-                    <img className="" src={Video} alt="" />
-                  </div>
-                </div> */}
+              <div className="px-4 py-4 bg-nu10 rounded-lg shadow -mt-40 mr-8">
                 <VideoPopup />
               </div>
             </div>

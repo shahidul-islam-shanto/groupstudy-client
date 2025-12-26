@@ -23,7 +23,7 @@ export default function VideoPopup() {
 
   return (
     <div className="relative">
-      <img className="w-full h-full" src={Video} alt="" />
+      <img className="w-full h-full rounded-lg" src={Video} alt="" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
         <Link
           to={"https://www.youtube.com/watch?v=dQw4w9WgXcQ"}

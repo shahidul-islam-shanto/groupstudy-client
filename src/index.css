@@ -2,7 +2,9 @@
 @plugin "daisyui";
 
 @theme {
-  --animate-ripple: ripple 1s linear infinite;
+  /* --animate-ripple: ripple 1.5s linear infinite; */
+  --animate-ripple: ripple 1.5s linear infinite;
+
   --font-display: "Rubik", sans-serif;
 
   --color-transparent: transparent;
@@ -24,6 +26,12 @@
   --breakpoint-2xl: 1296px;
   --breakpoint-3xl: 1600px;
   --breakpoint-4xl: 1700px;
+}
+ 
+
+ripple animation {
+  opacity: 0.846049;
+  transform: scale(1.2079);
 }
 
 @keyframes ripple {
