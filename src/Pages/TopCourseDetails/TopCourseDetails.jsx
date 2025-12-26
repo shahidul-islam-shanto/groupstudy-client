@@ -5,10 +5,10 @@ import { FaStar } from "react-icons/fa";
 import CourseVideo from "../../assets/images/course-video.png";
 import Video from "../../assets/images/video-icon.png";
 import VideoPopup from "../../Components/VideoPopup/VideoPopup";
+import { IoMdTime } from "react-icons/io";
 
 const TopCourseDetails = () => {
   const courses = useLoaderData();
-  // console.log(courses);
 
   const { image, rating, price, time, level, author, authorImg, coursesName } =
     courses;
@@ -116,7 +116,21 @@ const TopCourseDetails = () => {
             </div>
             <div className="col-span-4">
               <div className="px-4 py-4 bg-nu10 rounded-lg shadow -mt-40 mr-8">
-                <VideoPopup />
+                <div className="mb-4">
+                  <VideoPopup />
+                </div>
+                <div className="flex justify-between items-center mb-6">
+                  <h4>${price}</h4>
+                  <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-nu60">
+                    <IoMdTime className="text-nu30 text-[18px]" />
+                    <p className="text-nu30 font-medium">days left!</p>
+                  </div>
+                </div>
+                <div className="">
+                  <button className="text-nu20 font-semibold px-4 py-2 bg-nu40 rounded-full inline-block w-full">
+                    Add to Card
+                  </button>
+                </div>
               </div>
             </div>
           </div>
