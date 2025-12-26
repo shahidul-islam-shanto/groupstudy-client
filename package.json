@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.17",
+    "dotenv": "^17.2.3",
+    "firebase": "^12.7.0",
     "localforage": "^1.10.0",
     "magnific-popup": "^1.2.0",
     "match-sorter": "^8.2.0",

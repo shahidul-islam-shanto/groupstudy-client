@@ -2,16 +2,13 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 import BredCrumb from "../../Components/BredCrumb/BredCrumb";
 import { FaStar } from "react-icons/fa";
-import CourseVideo from "../../assets/images/course-video.png";
-import Video from "../../assets/images/video-icon.png";
 import VideoPopup from "../../Components/VideoPopup/VideoPopup";
 import { IoMdTime } from "react-icons/io";
 
 const TopCourseDetails = () => {
   const courses = useLoaderData();
 
-  const { image, rating, price, time, level, author, authorImg, coursesName } =
-    courses;
+  const { image, rating, price, author, authorImg, coursesName } = courses;
 
   return (
     <>
