@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import Logins from "../../assets/images/login.png";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    createUser(email, password)
+      .then((result) => {
+        console.log("this is a login", result.user);
+        Swal.fire({
+          title: "Sing In Successful!",
+          icon: "success",
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div>
       <div className="bg-nu10 lg:pt-60 py-28 ">
@@ -19,7 +43,7 @@ const Register = () => {
             <div className="col-span-6">
               <div className=" flex items-center justify-center">
                 <div className=" rounded-2xl px-10 py-10 w-full max-w-2xl space-y-4 shadow-lg">
-                  <form className="">
+                  <form onSubmit={handleRegister} className="">
                     <h1 className="text-xl font-bold mb-6 text-center">
                       Register your account
                     </h1>
