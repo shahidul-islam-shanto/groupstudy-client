@@ -13,9 +13,9 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
 
-    const form = e.target;
-    const email = form.email.value;
-    const password = form.password.value;
+    const from = e.target;
+    const email = from.email.value;
+    const password = from.password.value;
 
     createUser(email, password)
       .then((result) => {

@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
 import Logins from "../../assets/images/login.png";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaGoogle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { singInEmailPassword } = useContext(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+
+    const from = e.target;
+    const email = from.email.value;
+    const password = from.password.value;
+
+    singInEmailPassword(email, password)
+      .then((result) => {
+        console.log("sing in email password success", result.user);
+        Swal.fire({
+          title: "Sing In Successful!",
+          icon: "success",
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <>
       <div className="bg-nu10 lg:pt-60 py-28 ">
@@ -19,7 +43,7 @@ const Login = () => {
             <div className="lg:col-span-6 col-span-12">
               <div className=" flex items-center justify-center">
                 <div className="rounded-2xl px-10 py-10 w-full max-w-2xl space-y-4 shadow-lg">
-                  <form className="">
+                  <form onSubmit={handleLogin} className="">
                     <h1 className="text-xl mb-6 font-bold text-center">
                       Login your account
                     </h1>

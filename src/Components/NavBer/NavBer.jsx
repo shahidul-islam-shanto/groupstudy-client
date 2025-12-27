@@ -1,14 +1,17 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoSearch } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { toast } from "react-toastify";
 
 const NavBer = () => {
   const [open, setOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
   const inputRef = useRef(null);
+  const { logOut, user } = useContext(AuthContext);
 
   const handleSearch = (e) => {
     if (e.key === "Enter") {
@@ -16,6 +19,18 @@ const NavBer = () => {
       setShowSearch(false);
       e.target.value = "";
     }
+  };
+
+  const handleLogOut = () => {
+    const notify = () => toast("Wow so easy !");
+    logOut()
+      .then((result) => {
+        console.log("this is log out", result.user);
+        notify(result.user);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const NavBer = (
@@ -71,7 +86,7 @@ const NavBer = () => {
               </button>
 
               {showSearch && (
-                <div className="absolute right-0 mt-4 bg-nu20 p-3 rounded shadow">
+                <div className="absolute right-0 mt-4 bg-nu60 p-3 rounded shadow">
                   <input
                     ref={inputRef}
                     type="text"
@@ -84,11 +99,22 @@ const NavBer = () => {
               )}
             </div>
             <div className="">
-              <Link to={"/login"}>
-                <button className="px-4 py-2 bg-primary1 rounded-lg">
-                  Login
-                </button>
-              </Link>
+              {user?.email ? (
+                <li>
+                  <button
+                    onClick={handleLogOut}
+                    className="px-4 py-2 bg-primary1 rounded-lg"
+                  >
+                    Sing Out
+                  </button>
+                </li>
+              ) : (
+                <Link to={"/login"}>
+                  <button className="px-4 py-2 bg-primary1 rounded-lg">
+                    Login
+                  </button>
+                </Link>
+              )}
             </div>
             <div className="">
               <Link to={"/register"}>
