@@ -55,7 +55,9 @@ const NavBer = () => {
       <li className="text-nu20">
         <NavLink to={"/about"}>ABOUT US</NavLink>
       </li>
-      <li className="text-nu20">CONTACT US</li>
+      <li className="text-nu20">
+        {user?.email ? <NavLink to={"/myCourse"}>My Course</NavLink> : ""}
+      </li>
     </>
   );
 

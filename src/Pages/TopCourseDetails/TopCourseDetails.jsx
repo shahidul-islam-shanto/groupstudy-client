@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import BredCrumb from "../../Components/BredCrumb/BredCrumb";
 import { FaStar } from "react-icons/fa";
 import VideoPopup from "../../Components/VideoPopup/VideoPopup";
@@ -8,7 +8,7 @@ import { IoMdTime } from "react-icons/io";
 const TopCourseDetails = () => {
   const courses = useLoaderData();
 
-  const { image, rating, price, author, authorImg, coursesName } = courses;
+  const { _id, image, rating, price, author, authorImg, coursesName } = courses;
 
   return (
     <>
@@ -124,9 +124,11 @@ const TopCourseDetails = () => {
                   </div>
                 </div>
                 <div className="">
-                  <button className="text-nu20 font-semibold px-4 py-2 bg-nu40 rounded-full inline-block w-full">
-                    Add to Card
-                  </button>
+                  <Link to={`/checkout/${_id}`}>
+                    <button className="text-nu20 font-semibold px-4 py-2 bg-nu40 rounded-full inline-block w-full">
+                      Add to Card
+                    </button>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -21,7 +21,7 @@ const BredCrumb = ({ bredCrumb }) => {
               Home
             </Link>
             <IoIosArrowForward className="text-nu10 font-bold text-[20px]" />
-            <span>Course Details</span>
+            <span>{bredCrumb}</span>
           </div>
         </div>
       </div>
