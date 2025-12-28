@@ -42,6 +42,8 @@ const router = createBrowserRouter([
             <CheckOut />
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/courseService/${params.id}`),
       },
     ],
   },

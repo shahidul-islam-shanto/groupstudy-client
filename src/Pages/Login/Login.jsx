@@ -25,6 +25,7 @@ const Login = () => {
           icon: "success",
           draggable: true,
         });
+        form.reset();
       })
       .catch((error) => {
         console.error(error);

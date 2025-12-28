@@ -1,7 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
 import BredCrumb from "../../Components/BredCrumb/BredCrumb";
+import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const CheckOut = () => {
+  const { authorImg, coursesName, price } = useLoaderData();
+  const { user } = useContext(AuthContext);
+
+  const handleCheckOutItem = (e) => {
+    e.preventDefault();
+
+    const from = e.target;
+    const name = from.name.value;
+    const date = from.date.value;
+    const courseName = from.title.value;
+    const price = from.price.value;
+    const number = from.number.value;
+    const email = from.email.value;
+    const message = from.message.value;
+
+    const orderCheckOut = {
+      name: name,
+      date: date,
+      courseName: courseName,
+      price: price,
+      numberItem: number,
+      email: email,
+      message: message,
+      img: authorImg,
+    };
+
+    fetch("http://localhost:5000/checkOut", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(orderCheckOut),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.insertedId) {
+          Swal.fire({
+            title: "Successfully!",
+            text: "added this new Location?!",
+            icon: "success",
+          });
+        }
+      });
+  };
+
   return (
     <div>
       <div className="">
@@ -9,7 +58,10 @@ const CheckOut = () => {
       </div>
       <div className="xl:py-[130px] lg:py-[110px] md:py-[90px] sm:py-[70px] py-[60px]">
         <div className="container-2">
-          <form className="px-16 py-16 bg-nu60 rounded-2xl">
+          <form
+            onSubmit={handleCheckOutItem}
+            className="px-16 py-16 bg-nu60 rounded-2xl"
+          >
             <div className="grid grid-cols-12 gap-6 mb-6">
               <div className="col-span-6">
                 <input
@@ -23,7 +75,7 @@ const CheckOut = () => {
                 <input
                   type="date"
                   name="date"
-                  placeholder="Your Phone"
+                  placeholder="Date"
                   className=" w-full px-4 py-4 mb-4 bg-nu10 border border-nu60 placeholder:text-nu40 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
               </div>
@@ -40,6 +92,7 @@ const CheckOut = () => {
                   type="text"
                   name="title"
                   placeholder="Your Title"
+                  defaultValue={coursesName}
                   className="w-full px-4 py-4 mb-4 bg-nu10 border border-nu60 placeholder:text-nu40 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
               </div>
@@ -48,6 +101,7 @@ const CheckOut = () => {
                   type="email"
                   name="email"
                   placeholder="Your Email"
+                  defaultValue={user?.email}
                   className="w-full px-4 py-4 mb-4 bg-nu10 border border-nu60 placeholder:text-nu40 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
               </div>
@@ -57,6 +111,7 @@ const CheckOut = () => {
                   type="number"
                   name="price"
                   placeholder="Your price"
+                  defaultValue={price}
                   className="w-full px-4 py-4 mb-4 bg-nu10 border border-nu60 placeholder:text-nu40 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none"
                 />
               </div>
