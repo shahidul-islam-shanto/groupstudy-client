@@ -1,16 +1,17 @@
 import React from "react";
+import { IoClose } from "react-icons/io5";
 
-const TableCourse = ({ bookingCourse }) => {
-    const {} = bookingCourse
+const TableCourse = ({ bookingCourse, handleDeleteCourse }) => {
+  const { _id, img, courseName, name, email, price, date } = bookingCourse;
   return (
     <div>
-      <tr className="">
+      <tr className="flex justify-between gap-4 bg-nu60 mb-4 rounded-lg">
         <th>
           <button
-            onClick={() => handleDeleteBookings(_id)}
+            onClick={() => handleDeleteCourse(_id)}
             className="px-2 py-2 bg-nu20 inline-block rounded-full"
           >
-            <IoCloseOutline className="text-nu10 text-[24px] font-bold" />
+            <IoClose className="text-nu10 text-[24px] font-bold" />
           </button>
         </th>
         <td>
@@ -26,8 +27,8 @@ const TableCourse = ({ bookingCourse }) => {
             </div>
 
             <div>
-              <div className="font-bold">{customerName}</div>
-              <div className="text-sm opacity-50">{title}</div>
+              <div className="font-bold">{name}</div>
+              <div className="text-sm opacity-50">{courseName}</div>
             </div>
           </div>
         </td>
