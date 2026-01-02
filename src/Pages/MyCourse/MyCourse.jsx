@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import BredCrumb from "../../Components/BredCrumb/BredCrumb";
 import TableCourse from "./TableCourse";
+import Swal from "sweetalert2";
 
 const MyCourse = () => {
   const { user } = useContext(AuthContext);
@@ -19,22 +20,40 @@ const MyCourse = () => {
   }, [url]);
 
   const handleDeleteCourse = (id) => {
-    const proceed = confirm("Are you sure this item is delete?");
-    if (proceed) {
-      fetch(`http://localhost:5000/checkOut/${id}`, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          console.log(data);
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/checkOut/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
 
-          if (data.deletedCount > 0) {
-            alert("item delete");
-            const remaining = bookingCourse.filter((items) => items._id !== id);
-            setBookingCourse(remaining);
-          }
-        });
-    }
+            if (data.deletedCount > 0) {
+              // alert("item delete");
+              const remaining = bookingCourse.filter(
+                (items) => items._id !== id
+              );
+              setBookingCourse(remaining);
+            }
+            Swal.fire({
+              title: "Deleted!",
+              text: "Your file has been deleted.",
+              icon: "success",
+            });
+          });
+      }
+    });
+
+    // const proceed = confirm("Are you sure this item is delete?");
   };
 
   return (
