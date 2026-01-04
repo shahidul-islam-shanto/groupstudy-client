@@ -38,7 +38,6 @@ const MyCourse = () => {
             console.log(data);
 
             if (data.deletedCount > 0) {
-              // alert("item delete");
               const remaining = bookingCourse.filter(
                 (items) => items._id !== id
               );
@@ -52,8 +51,6 @@ const MyCourse = () => {
           });
       }
     });
-
-    // const proceed = confirm("Are you sure this item is delete?");
   };
 
   return (
