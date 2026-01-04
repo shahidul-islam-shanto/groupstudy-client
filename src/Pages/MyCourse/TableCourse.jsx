@@ -1,8 +1,13 @@
 import React from "react";
 import { IoClose } from "react-icons/io5";
 
-const TableCourse = ({ bookingCourse, handleDeleteCourse }) => {
-  const { _id, img, courseName, name, email, price, date } = bookingCourse;
+const TableCourse = ({
+  bookingCourse,
+  handleDeleteCourse,
+  handleConfirmCourse,
+}) => {
+  const { _id, img, courseName, name, email, price, date, status } =
+    bookingCourse;
   return (
     <div>
       <tr className="flex justify-between gap-4 bg-nu60 mb-4 rounded-lg">
@@ -50,7 +55,7 @@ const TableCourse = ({ bookingCourse, handleDeleteCourse }) => {
             <button
               onClick={() => {
                 // console.log(_id);
-                handleConfirmBooking(_id);
+                handleConfirmCourse(_id);
               }}
               className="px-4 py-2 bg-primary1 rounded-md text-nu10"
             >

@@ -53,6 +53,27 @@ const MyCourse = () => {
     });
   };
 
+  const handleConfirmCourse = (id) => {
+    fetch(`http://localhost:5000/checkOut/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ status: "Confirm" }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          const remaining = bookingCourse.filter((items) => items._id !== id);
+          const update = bookingCourse.find((item) => item._id === id);
+          update.status = "Confirm";
+          const newCourse = [update, ...remaining];
+          setBookingCourse(newCourse);
+        }
+      });
+  };
+
   return (
     <>
       <div className="">
@@ -67,7 +88,7 @@ const MyCourse = () => {
                   key={items._id}
                   bookingCourse={items}
                   handleDeleteCourse={handleDeleteCourse}
-                  // handleConfirmBooking={handleConfirmBooking}
+                  handleConfirmCourse={handleConfirmCourse}
                 />
               ))}
             </tbody>
